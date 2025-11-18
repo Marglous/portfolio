@@ -9,37 +9,38 @@
 <body>
 
     <!--Hero-->
-      <div class="hero-split-container" id="home">
-        <div class="hero-split hero-left">
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#work">Our Work</a>
-                <a href="#contact">Contact</a>
-              </nav>
-          <img src="images/marglous_hero.png" alt="Marglous Logo" class="logo">
-        </div>
-        <div class="hero-split hero-right">
-          <div class="hero-content">
-            <h1>Welcome to Marglous</h1>
-            <p>TEAM DESCRIPTION</p>
-          </div>
+    <nav class="navbar">
+      <a href="#about">About Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="hero-split-container" id="home">
+      <div class="hero-split hero-left">
+        <img src="images/marglous_hero.png" alt="Marglous Logo" class="logo">
+      </div>
+      <div class="hero-split hero-right">
+        <div class="hero-content">
+          <h1><b>Marglous</b></h1>
+          <p><em>DESC.</em></p>
         </div>
       </div>
+    </div>
+
     <!-- Team Member Split -->    
           <div class="split-container" id="about">
             <div class="split left" onclick="openTeamModal(1)">
               <div class="centered">
                 <img src="images/renae.png" alt="Renae Martinovich">
                 <h2>Renae Martinovich</h2>
-                <p>DESCRIPTION.</p>
+                <p><em>Press for more.</em></p>
               </div>
             </div>
             <div class="split right" onclick="openTeamModal(2)">
               <div class="centered">
                 <img src="images/zoe.png" alt="Zoe Douglas">
                 <h2>Zoe Douglas</h2>
-                <p>DESCRIPTION.</p>
+                <p><em>Press for more.</em></p>
               </div>
             </div>
           </div>
@@ -66,11 +67,11 @@
     <!-- Portfolio Work Modal-->
           <div>
             <br>
-            <H1 style="text-align: center;"> OUR WORK </H1>
+            <h1 style="text-align: center; color:#658e93;"> OUR WORK </h1>
           </div>
           <div class="portfolio-section" id="work">
             <div class="portfolio-grid">
-              <div class="portfolio-item" onclick="openModal(1)">
+              <div class="portfolio-item" onclick="openModal(1)" style="background: #c7dd9d;">
                 <img src="images/trash_talkers_1.jpg" alt="Trash Talkers">
                 <div class="portfolio-info">
                   <h3>Trash Talkers</h3>
@@ -78,7 +79,7 @@
                 </div>
               </div>
               
-              <div class="portfolio-item" onclick="openModal(2)">
+              <div class="portfolio-item" onclick="openModal(2)" style="background: #fee0e9;">
                 <img src="images/breast_cancer_1.jpg" alt="Breast Cancer Awareness">
                 <div class="portfolio-info">
                   <h3>Breast Cancer Awareness</h3>
@@ -86,7 +87,7 @@
                 </div>
               </div>
               
-              <div class="portfolio-item" onclick="openModal(3)">
+              <div class="portfolio-item" onclick="openModal(3)" style="background: #fee0e9;">
                 <img src="images/no_ugly_1.jpg" alt="No Ugly">
                 <div class="portfolio-info">
                   <h3>Burnout - No Ugly</h3>
@@ -94,7 +95,7 @@
                 </div>
               </div>
               
-              <div class="portfolio-item" onclick="openModal(4)">
+              <div class="portfolio-item" onclick="openModal(4)" style="background: #c7dd9d;">
                 <img src="images/milo_1.jpg" alt="Milo The Great Emu Leader">
                 <div class="portfolio-info">
                   <h3>Milo the Great Emu Leader</h3>
@@ -110,6 +111,12 @@
             <div class="modal-content" onclick="event.stopPropagation()">
               <span class="close" onclick="closeModal()">&times;</span>
               <h3 id="modalTitle"></h3>
+
+              <div class="finalist-badge" id="finalistBadge" style="display: none;">
+                Finalist
+              </div>
+
+
               <div class="gallery-container">
                 <img id="mainImage" class="main-image" src="" alt="Project">
                 <button class="gallery-nav prev" onclick="changeImage(-1)">&#10094;</button>
@@ -138,6 +145,13 @@
             
             <div class="contact-card">
               <div class="contact-icon"></div>
+              <h3>Call Us</h3>
+              <a href="tel:+642102723227">Renae Martinovich: 021 027 23227</a>
+              <a href="tel:+642102723227">Zoe Douglas: 021 027 23227</a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon"></div>
               <h3>Location</h3>
               <p>Auckland, New Zealand</p>
             </div>
@@ -159,14 +173,14 @@
             name: "Renae Martinovich",
             role: "Copywriter",
             image: "images/renae.png",
-            skills: ["SKILL", "SKILL", "SKILL", "SKILL", "SKILL"],
-            bio: "DESCRIPTION",
+            skills: ["Drawing & Painting", "Social Media Management", "Adobe Photoshop", "Canva", "Photography", "Storyboarding", "Event Management/Planning", "Cosmetics/Beauty", "Copywriting", "Art Direction"],
+            bio: "My creative sweet spot sits somewhere between “this might work” and “hear me out.” I’m an artistic kid at heart and can visualise ideas fast, but Zoe is the one who makes my scribbles presentable. I’m chronically online, obsessed with creating novel ideas, and can whip out a line dance to just about any country song. I thrive off feedback and love turning playful chaos into work that actually works.",
         },
         2: {
             name: "Zoe Douglas",
             role: "Art Director",
             image: "images/zoe.png",
-            skills: ["SKILL", "SKILL", "SKILL", "SKILL", "SKILL", "SKILL"],
+            skills: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Adobe After Effects", "Adobe Premiere Pro", "Adobe XD", "Office 365 Suite", "Canva", "Photography", "Graphic Design", "Coding", "Web & App Design", "Motion Graphics", "Social Media Content Creation", "Video Editing"],
             bio: "DESCRIPTION",
         }
         };
@@ -214,6 +228,7 @@
                 const projects = {
                     1: {
                     title: "Trash Talkers",
+                    finalist: true,
                     description: "More information here about the project.",
                     images: [
                         "images/trash_talkers_1.jpg",
@@ -224,6 +239,7 @@
                     },
                     2: {
                     title: "Breast Cancer Awareness",
+                    finalist: false,
                     description: "More information here about the project.",
                     images: [
                         "images/breast_cancer_1.jpg",
@@ -232,6 +248,7 @@
                     },
                     3: {
                     title: "No Ugly Burnout",
+                    finalist: false,
                     description: "More information here about the project.",
                     images: [
                         "images/no_ugly_1.jpg",
@@ -242,6 +259,7 @@
                     },
                     4: {
                     title: "Milo the Great Emu Leader",
+                    finalist: true,
                     description: "More information here about the project.",
                     images: [
                         "images/milo_1.jpg",
@@ -261,6 +279,9 @@
                     document.getElementById('modalTitle').textContent = currentProject.title;
                     document.getElementById('modalDescription').textContent = currentProject.description;
                     
+                    const badge = document.getElementById('finalistBadge');
+                    badge.style.display = currentProject.finalist ? 'inline-block' : 'none';
+
                     showImage(0);
                     createThumbnails();
                     updateCounter();
