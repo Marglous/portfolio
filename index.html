@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marglous</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!--Hero-->
+      <div class="hero-split-container" id="home">
+        <div class="hero-split hero-left">
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#work">Our Work</a>
+                <a href="#contact">Contact</a>
+              </nav>
+          <img src="images/marglous_hero.png" alt="Marglous Logo" class="logo">
+        </div>
+        <div class="hero-split hero-right">
+          <div class="hero-content">
+            <h1>Welcome to Marglous</h1>
+            <p>TEAM DESCRIPTION</p>
+          </div>
+        </div>
+      </div>
+    <!-- Team Member Split -->    
+          <div class="split-container" id="about">
+            <div class="split left" onclick="openTeamModal(1)">
+              <div class="centered">
+                <img src="images/renae.png" alt="Renae Martinovich">
+                <h2>Renae Martinovich</h2>
+                <p>DESCRIPTION.</p>
+              </div>
+            </div>
+            <div class="split right" onclick="openTeamModal(2)">
+              <div class="centered">
+                <img src="images/zoe.png" alt="Zoe Douglas">
+                <h2>Zoe Douglas</h2>
+                <p>DESCRIPTION.</p>
+              </div>
+            </div>
+          </div>
+          
+    <!-- Team Member Modal -->
+          <div id="teamModal" class="modal" onclick="closeTeamModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+              <span class="close" onclick="closeTeamModal()">&times;</span>
+              <div class="team-modal-layout">
+                <img id="teamImage" class="team-modal-image" src="" alt="">
+                <div class="team-info">
+                  <h2 id="teamName"></h2>
+                  <h3 id="teamRole"></h3>
+                  <p id="teamBio"></p>
+                  <div class="skills-section">
+                    <h4>Skills</h4>
+                    <div id="teamSkills" class="skills-list"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <!-- Portfolio Work Modal-->
+          <div>
+            <br>
+            <H1 style="text-align: center;"> OUR WORK </H1>
+          </div>
+          <div class="portfolio-section" id="work">
+            <div class="portfolio-grid">
+              <div class="portfolio-item" onclick="openModal(1)">
+                <img src="images/trash_talkers_1.jpg" alt="Trash Talkers">
+                <div class="portfolio-info">
+                  <h3>Trash Talkers</h3>
+                  <p>Brief description of the project goes here.</p>
+                </div>
+              </div>
+              
+              <div class="portfolio-item" onclick="openModal(2)">
+                <img src="images/breast_cancer_1.jpg" alt="Breast Cancer Awareness">
+                <div class="portfolio-info">
+                  <h3>Breast Cancer Awareness</h3>
+                  <p>Brief description of the project goes here.</p>
+                </div>
+              </div>
+              
+              <div class="portfolio-item" onclick="openModal(3)">
+                <img src="images/no_ugly_1.jpg" alt="No Ugly">
+                <div class="portfolio-info">
+                  <h3>Burnout - No Ugly</h3>
+                  <p>Brief description of the project goes here.</p>
+                </div>
+              </div>
+              
+              <div class="portfolio-item" onclick="openModal(4)">
+                <img src="images/milo_1.jpg" alt="Milo The Great Emu Leader">
+                <div class="portfolio-info">
+                  <h3>Milo the Great Emu Leader</h3>
+                  <p>Brief description of the project goes here.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+    <!-- Portfolio Work Modal Popup -->
+          <div id="projectModal" class="modal" onclick="closeModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h3 id="modalTitle"></h3>
+              <div class="gallery-container">
+                <img id="mainImage" class="main-image" src="" alt="Project">
+                <button class="gallery-nav prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="changeImage(1)">&#10095;</button>
+              </div>
+              <div class="thumbnail-strip" id="thumbnailStrip"></div>
+              <div class="image-counter" id="imageCounter"></div>
+
+              <p class="project-description" id="modalDescription"></p>
+              
+            </div>
+          </div>
+
+    <!--Contact Us-->
+    <div class="contact-section" id="contact">
+        <div class="contact-container">
+          <h2>Get In Touch</h2>
+          <p class="contact-subtitle">We'd love to hear from you!</p>
+          
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon"></div>
+              <h3>Email Us</h3>
+              <a href="mailto:marglous1@outlook.com">marglous1@outlook.com</a>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon"></div>
+              <h3>Location</h3>
+              <p>Auckland, New Zealand</p>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <p>&copy; 2025 Marglous. All rights reserved.</p>
+      </footer>
+
+    <!--JavaScript Begins-->     
+    <script>
+        // Team member information
+        const teamMembers = {
+        1: {
+            name: "Renae Martinovich",
+            role: "Copywriter",
+            image: "images/renae.png",
+            skills: ["SKILL", "SKILL", "SKILL", "SKILL", "SKILL"],
+            bio: "DESCRIPTION",
+        },
+        2: {
+            name: "Zoe Douglas",
+            role: "Art Director",
+            image: "images/zoe.png",
+            skills: ["SKILL", "SKILL", "SKILL", "SKILL", "SKILL", "SKILL"],
+            bio: "DESCRIPTION",
+        }
+        };
+
+        function openTeamModal(memberId) {
+        const member = teamMembers[memberId];
+        
+        document.getElementById('teamName').textContent = member.name;
+        document.getElementById('teamRole').textContent = member.role;
+        document.getElementById('teamImage').src = member.image;
+        document.getElementById('teamBio').textContent = member.bio;
+        
+        // Create skill tags
+        const skillsContainer = document.getElementById('teamSkills');
+        skillsContainer.innerHTML = '';
+        member.skills.forEach(skill => {
+            const tag = document.createElement('span');
+            tag.className = 'skill-tag';
+            tag.textContent = skill;
+            skillsContainer.appendChild(tag);
+        });
+        
+        document.getElementById('teamModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        }
+
+        function closeTeamModal(event) {
+        if (!event || event.target.id === 'teamModal') {
+            document.getElementById('teamModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        }
+
+        // Add Escape key support for team modal
+        document.addEventListener('keydown', function(event) {
+        if (document.getElementById('teamModal').style.display === 'block' && event.key === 'Escape') {
+            closeTeamModal();
+        }
+        });
+
+                let currentProject = null;
+                let currentImageIndex = 0;
+                
+                // Project data with multiple images
+                const projects = {
+                    1: {
+                    title: "Trash Talkers",
+                    description: "More information here about the project.",
+                    images: [
+                        "images/trash_talkers_1.jpg",
+                        "images/trash_talkers_2.jpg",
+                        "images/trash_talkers_3.jpg",
+                        "images/trash_talkers_4.jpg"
+                    ]
+                    },
+                    2: {
+                    title: "Breast Cancer Awareness",
+                    description: "More information here about the project.",
+                    images: [
+                        "images/breast_cancer_1.jpg",
+                        "images/breast_cancer_2.jpg"
+                    ]
+                    },
+                    3: {
+                    title: "No Ugly Burnout",
+                    description: "More information here about the project.",
+                    images: [
+                        "images/no_ugly_1.jpg",
+                        "images/no_ugly_2.jpg",
+                        "images/no_ugly_3.jpg",
+                        "images/no_ugly_4.jpg"
+                    ]
+                    },
+                    4: {
+                    title: "Milo the Great Emu Leader",
+                    description: "More information here about the project.",
+                    images: [
+                        "images/milo_1.jpg",
+                        "images/milo_2.jpg",
+                        "images/milo_3.jpg",
+                        "images/milo_4.jpg",
+                        "images/milo_5.jpg"
+                    ]
+                    },
+                
+                };
+                
+                function openModal(projectId) {
+                    currentProject = projects[projectId];
+                    currentImageIndex = 0;
+                    
+                    document.getElementById('modalTitle').textContent = currentProject.title;
+                    document.getElementById('modalDescription').textContent = currentProject.description;
+                    
+                    showImage(0);
+                    createThumbnails();
+                    updateCounter();
+                    
+                    document.getElementById('projectModal').style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+                
+                function showImage(index) {
+                    currentImageIndex = index;
+                    document.getElementById('mainImage').src = currentProject.images[index];
+                    updateThumbnailActive();
+                    updateCounter();
+                }
+                
+                function changeImage(direction) {
+                    let newIndex = currentImageIndex + direction;
+                    
+                    if (newIndex < 0) {
+                    newIndex = currentProject.images.length - 1;
+                    } else if (newIndex >= currentProject.images.length) {
+                    newIndex = 0;
+                    }
+                    
+                    showImage(newIndex);
+                }
+                
+                function createThumbnails() {
+                    const strip = document.getElementById('thumbnailStrip');
+                    strip.innerHTML = '';
+                    
+                    currentProject.images.forEach((img, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.src = img;
+                    thumb.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                    thumb.onclick = () => showImage(index);
+                    strip.appendChild(thumb);
+                    });
+                }
+                
+                function updateThumbnailActive() {
+                    const thumbnails = document.querySelectorAll('.thumbnail');
+                    thumbnails.forEach((thumb, index) => {
+                    thumb.classList.toggle('active', index === currentImageIndex);
+                    });
+                }
+                
+                function updateCounter() {
+                    document.getElementById('imageCounter').textContent = 
+                    `${currentImageIndex + 1} / ${currentProject.images.length}`;
+                }
+                
+                function closeModal(event) {
+                    if (!event || event.target.id === 'projectModal') {
+                    document.getElementById('projectModal').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    }
+                }
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', function(event) {
+                    if (document.getElementById('projectModal').style.display === 'block') {
+                    if (event.key === 'Escape') {
+                        closeModal();
+                    } else if (event.key === 'ArrowLeft') {
+                        changeImage(-1);
+                    } else if (event.key === 'ArrowRight') {
+                        changeImage(1);
+                    }
+                    }
+                });
+    </script>
+          
+</body>
