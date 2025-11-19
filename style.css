@@ -206,6 +206,62 @@ body, html {
     object-fit: cover;
     flex-shrink: 0;
   }
+
+  /* Team Modal Sticker Overlay */
+.team-sticker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(15deg);
+  z-index: 100;
+  animation: stickerPop 0.4s ease-out;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
+}
+
+.team-sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Pop-in animation */
+@keyframes stickerPop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) rotate(-50deg);
+    opacity: 1;
+  }
+}
+
+/* Different sticker styles for each person */
+.team-sticker.renae {
+  transform: rotate(-50deg);
+}
+
+.team-sticker.zoe {
+  transform: rotate(-50deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-sticker {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    right: 15px;
+  }
+}
   
   .team-info {
     flex: 1;
@@ -231,17 +287,6 @@ body, html {
     color: #658e93;
   }
 
-/* Finalist Badge */
-.finalist-badge {
-  display: inline-block;
-  background: #FFD700; /* Gold color */
-  color: #658e93;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 0.9em;
-  margin-bottom: 20px;
-}
   
   .skills-section h4 {
     margin-bottom: 15px;
@@ -261,6 +306,7 @@ body, html {
     font-size: 0.9em;
     color: #658e93;
   }
+
 
   /* OUR WORK */
 
@@ -300,7 +346,6 @@ body, html {
   
   .portfolio-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
   
   .portfolio-item img {
@@ -341,11 +386,25 @@ body, html {
     margin: 50px auto;
     padding: 40px;
     max-width: 1000px;
-    background: white;
+    background: #f4f3f1;
     border-radius: 10px;
     animation: slideIn 0.3s ease;
     color: #658e93;
   }
+
+  /* Finalist Badge */
+.finalist-badge {
+  display: inline-block;
+  background: #caab00; /* Gold color */
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
   
   @keyframes slideIn {
     from {
