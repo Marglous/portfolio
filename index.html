@@ -22,7 +22,7 @@
       <div class="hero-split hero-right">
         <div class="hero-content">
           <h1><b>Marglous</b></h1>
-          <p><em>DESC.</em></p>
+          <p><em>AUT’s latest 2025 communications graduates, a creative duo who may secretly be related, chronically online, and Bluetooth-paired. Always ready to lean, adsorb all the knowledge possible, and turn weird sparks into ideas that land.</em></p>
         </div>
       </div>
     </div>
@@ -33,14 +33,14 @@
               <div class="centered">
                 <img src="images/renae.png" alt="Renae Martinovich">
                 <h2>Renae Martinovich</h2>
-                <p><em>Press for more.</em></p>
+                <p><em>Get to know me.</em></p>
               </div>
             </div>
             <div class="split right" onclick="openTeamModal(2)">
               <div class="centered">
                 <img src="images/zoe.png" alt="Zoe Douglas">
                 <h2>Zoe Douglas</h2>
-                <p><em>Press for more.</em></p>
+                <p><em>Get to know me.</em></p>
               </div>
             </div>
           </div>
@@ -49,6 +49,12 @@
           <div id="teamModal" class="modal" onclick="closeTeamModal(event)">
             <div class="modal-content" onclick="event.stopPropagation()">
               <span class="close" onclick="closeTeamModal()">&times;</span>
+
+                  <!-- Sticker with image -->
+    <div class="team-sticker" id="teamSticker">
+      <img id="teamStickerImg" src="" alt="Sticker">
+    </div>
+
               <div class="team-modal-layout">
                 <img id="teamImage" class="team-modal-image" src="" alt="">
                 <div class="team-info">
@@ -75,31 +81,27 @@
                 <img src="images/trash_talkers_1.jpg" alt="Trash Talkers">
                 <div class="portfolio-info">
                   <h3>Trash Talkers</h3>
-                  <p>Brief description of the project goes here.</p>
                 </div>
               </div>
               
               <div class="portfolio-item" onclick="openModal(2)" style="background: #fee0e9;">
-                <img src="images/breast_cancer_1.jpg" alt="Breast Cancer Awareness">
+                <img src="images/check_your_boobs_1.jpg" alt="Breast Cancer Awareness">
                 <div class="portfolio-info">
-                  <h3>Breast Cancer Awareness</h3>
-                  <p>Brief description of the project goes here.</p>
+                  <h3>Check Your Boobs</h3>
                 </div>
               </div>
               
               <div class="portfolio-item" onclick="openModal(3)" style="background: #fee0e9;">
-                <img src="images/no_ugly_1.jpg" alt="No Ugly">
+                <img src="images/you_still_need_1.jpg" alt="No Ugly">
                 <div class="portfolio-info">
-                  <h3>Burnout - No Ugly</h3>
-                  <p>Brief description of the project goes here.</p>
+                  <h3>You Just Need</h3>
                 </div>
               </div>
               
               <div class="portfolio-item" onclick="openModal(4)" style="background: #c7dd9d;">
-                <img src="images/milo_1.jpg" alt="Milo The Great Emu Leader">
+                <img src="images/milo_history_1.jpg" alt="Milo's True History">
                 <div class="portfolio-info">
-                  <h3>Milo the Great Emu Leader</h3>
-                  <p>Brief description of the project goes here.</p>
+                  <h3>Milo's "True" History</h3>
                 </div>
               </div>
               </div>
@@ -124,8 +126,6 @@
               </div>
               <div class="thumbnail-strip" id="thumbnailStrip"></div>
               <div class="image-counter" id="imageCounter"></div>
-
-              <p class="project-description" id="modalDescription"></p>
               
             </div>
           </div>
@@ -133,8 +133,8 @@
     <!--Contact Us-->
     <div class="contact-section" id="contact">
         <div class="contact-container">
-          <h2>Get In Touch</h2>
-          <p class="contact-subtitle">We'd love to hear from you!</p>
+          <h2>Lets grab a coffee &#40or hot chocolate&#41.</h2>
+          <h3>Things just click better when we're face to face</h3>
           
           <div class="contact-grid">
             <div class="contact-card">
@@ -146,8 +146,8 @@
             <div class="contact-card">
               <div class="contact-icon"></div>
               <h3>Call Us</h3>
-              <a href="tel:+642102723227">Renae Martinovich: 021 027 23227</a>
-              <a href="tel:+642102723227">Zoe Douglas: 021 027 23227</a>
+              <p><b>Renae Martinovich:</b><a href="tel:+642102829996">021 028 29996</a></p>
+              <p><b>Zoe Douglas:</b><a href="tel:+642102723227">021 027 23227</a></p>
             </div>
 
             <div class="contact-card">
@@ -175,15 +175,20 @@
             image: "images/renae.png",
             skills: ["Drawing & Painting", "Social Media Management", "Adobe Photoshop", "Canva", "Photography", "Storyboarding", "Event Management/Planning", "Cosmetics/Beauty", "Copywriting", "Art Direction"],
             bio: "My creative sweet spot sits somewhere between “this might work” and “hear me out.” I’m an artistic kid at heart and can visualise ideas fast, but Zoe is the one who makes my scribbles presentable. I’m chronically online, obsessed with creating novel ideas, and can whip out a line dance to just about any country song. I thrive off feedback and love turning playful chaos into work that actually works.",
-        },
+            sticker: "images/renae_sticker.png",
+            stickerClass: "renae"
+          },
         2: {
             name: "Zoe Douglas",
             role: "Art Director",
             image: "images/zoe.png",
             skills: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Adobe After Effects", "Adobe Premiere Pro", "Adobe XD", "Office 365 Suite", "Canva", "Photography", "Graphic Design", "Coding", "Web & App Design", "Motion Graphics", "Social Media Content Creation", "Video Editing"],
-            bio: "DESCRIPTION",
+            bio: "I love building ideas that feel meaningful and are visually striking. Outside of design and concepting. Curiosity is a bit part of how I work and I love seeing how people connect with art from a distance. I spend a lot of time reading, and diving into anything new I can learn. I’m reliable, organised, and thoughtful wth my work, but i’m happiest when I get to explore weird, out-of-the-box ideas and turn them into something smart and engaging",
+            sticker: "images/zoe_sticker.png",
+            stickerClass: "zoe"
         }
         };
+
 
         function openTeamModal(memberId) {
         const member = teamMembers[memberId];
@@ -192,7 +197,13 @@
         document.getElementById('teamRole').textContent = member.role;
         document.getElementById('teamImage').src = member.image;
         document.getElementById('teamBio').textContent = member.bio;
-        
+
+        // Set the sticker image
+  document.getElementById('teamStickerImg').src = member.sticker;
+  const stickerEl = document.getElementById('teamSticker');
+  stickerEl.className = 'team-sticker ' + member.stickerClass;
+  
+  
         // Create skill tags
         const skillsContainer = document.getElementById('teamSkills');
         skillsContainer.innerHTML = '';
@@ -229,7 +240,6 @@
                     1: {
                     title: "Trash Talkers",
                     finalist: true,
-                    description: "More information here about the project.",
                     images: [
                         "images/trash_talkers_1.jpg",
                         "images/trash_talkers_2.jpg",
@@ -238,35 +248,34 @@
                     ]
                     },
                     2: {
-                    title: "Breast Cancer Awareness",
+                    title: "Check Your Boobs",
                     finalist: false,
-                    description: "More information here about the project.",
                     images: [
-                        "images/breast_cancer_1.jpg",
-                        "images/breast_cancer_2.jpg"
+                        "images/check_your_boobs_1.jpg",
+                        "images/check_your_boobs_2.jpg",
+                        "images/check_your_boobs_3.jpg",
+                        "images/check_your_boobs_4.jpg"
                     ]
                     },
                     3: {
-                    title: "No Ugly Burnout",
+                    title: "You Still Need",
                     finalist: false,
-                    description: "More information here about the project.",
                     images: [
-                        "images/no_ugly_1.jpg",
-                        "images/no_ugly_2.jpg",
-                        "images/no_ugly_3.jpg",
-                        "images/no_ugly_4.jpg"
+                        "images/you_still_need_1.jpg",
+                        "images/you_still_need_2.jpg",
+                        "images/you_still_need_3.jpg",
+                        "images/you_still_need_4.jpg"
                     ]
                     },
                     4: {
-                    title: "Milo the Great Emu Leader",
+                    title: "Milo's \"True\" History",
                     finalist: true,
-                    description: "More information here about the project.",
                     images: [
-                        "images/milo_1.jpg",
-                        "images/milo_2.jpg",
-                        "images/milo_3.jpg",
-                        "images/milo_4.jpg",
-                        "images/milo_5.jpg"
+                        "images/milo_history_1.jpg",
+                        "images/milo_history_2.jpg",
+                        "images/milo_history_3.jpg",
+                        "images/milo_history_4.jpg",
+                        "images/milo_history_5.jpg"
                     ]
                     },
                 
@@ -277,7 +286,6 @@
                     currentImageIndex = 0;
                     
                     document.getElementById('modalTitle').textContent = currentProject.title;
-                    document.getElementById('modalDescription').textContent = currentProject.description;
                     
                     const badge = document.getElementById('finalistBadge');
                     badge.style.display = currentProject.finalist ? 'inline-block' : 'none';
