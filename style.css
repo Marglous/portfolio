@@ -80,19 +80,19 @@ body, html {
 .about-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px 60px 20px; /* Reduced top, increased bottom */
+  padding: 40px 20px 60px 20px;
 }
 
 .about-header {
   text-align: center;
-  margin-bottom: 40px; /* Reduced from 50px */
+  margin-bottom: 40px;
 }
 
 .about-header h2 {
   font-size: 3em;
   color: #304C83;
   margin-bottom: 20px;
-  margin-top: 0; /* Remove default top margin */
+  margin-top: 0;
 }
 
 .about-description {
@@ -183,7 +183,58 @@ body, html {
   flex-shrink: 0;
 }
 
+/* Team Modal Sticker Overlay */
+.team-sticker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(15deg);
+  z-index: 100;
+  animation: stickerPop 0.4s ease-out;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
+}
+
+.team-sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes stickerPop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) rotate(-50deg);
+    opacity: 1;
+  }
+}
+
+.team-sticker.renae {
+  transform: rotate(-50deg);
+}
+
+.team-sticker.zoe {
+  transform: rotate(-50deg);
+}
+
 @media (max-width: 768px) {
+  .team-sticker {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    right: 15px;
+  }
+}
 
 .team-info {
   flex: 1;
@@ -223,11 +274,11 @@ body, html {
   border-radius: 20px;
   font-size: 0.9em;
 }
-}
+
 
 /* Auto-scrolling banner */
 .scrolling-banner {
-  background: #FDF6EC; /* Cream color to match site background */
+  background: #FDF6EC; 
   padding: 30px 30px 0;
   overflow: hidden;
   white-space: nowrap;
@@ -343,8 +394,8 @@ body, html {
 
 .modal-content {
   position: relative;
-  margin: 20px auto; /* Reduced from 50px - less gray space above */
-  padding: 20px 40px 40px 40px; /* Reduced top padding from 40px to 20px */
+  margin: 20px auto; 
+  padding: 20px 40px 40px 40px; 
   max-width: 1000px;
   background: #FDF6EC;
   border-radius: 10px;
@@ -355,7 +406,7 @@ body, html {
 .modal-content h3 {
   font-size: 2em;
   margin-bottom: 15px;
-  margin-top: 0; /* Remove default top margin on heading */
+  margin-top: 0;
 }
 
 /* Finalist Badge */
@@ -507,9 +558,9 @@ body, html {
   }
 }
 
-/* Footer (Contact Section) - Remove scroll-under effect */
+/* Footer (Contact Section) */
 .footer {
-  position: relative; /* Changed from sticky */
+  position: relative;
   z-index: 1;
   background: #F494B4;
   padding: 80px 20px;
@@ -606,7 +657,7 @@ body, html {
   font-size: 0.9em;
   opacity: 0.8;
 }
-.copyright2{
+.copyright{
   margin-top: 10px;
   font-size: 0.8em;
   opacity: 0.8;
