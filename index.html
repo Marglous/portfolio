@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="main-content">
     <!--Hero-->
     <nav class="navbar">
       <a href="#about">About Us</a>
@@ -15,45 +15,40 @@
       <a href="#contact">Contact</a>
     </nav>
     
-    <div class="hero-split-container" id="home">
-      <div class="hero-split hero-left">
-        <img src="images/marglous_hero.png" alt="Marglous Logo" class="logo">
-      </div>
-      <div class="hero-split hero-right">
-        <div class="hero-content">
-          <h1><b>Marglous</b></h1>
-          <p><em>AUT’s latest 2025 communications graduates, a creative duo who may secretly be related, chronically online, and Bluetooth-paired. Always ready to lean, adsorb all the knowledge possible, and turn weird sparks into ideas that land.</em></p>
-        </div>
-      </div>
-    </div>
+  <!-- Hero Container -->
+  <div class="hero-split-container" id="home">
+    <img src="images/marglous_hero2.png" alt="Marglous Hero" class="hero-image">
+  </div>
+
+  </div>
+
 
     <!-- Team Member Split -->    
-          <div class="split-container" id="about">
-            <div class="split left" onclick="openTeamModal(1)">
-              <div class="centered">
-                <img src="images/renae.png" alt="Renae Martinovich">
-                <h2>Renae Martinovich</h2>
-                <p><em>Get to know me.</em></p>
-              </div>
-            </div>
-            <div class="split right" onclick="openTeamModal(2)">
-              <div class="centered">
-                <img src="images/zoe.png" alt="Zoe Douglas">
-                <h2>Zoe Douglas</h2>
-                <p><em>Get to know me.</em></p>
-              </div>
-            </div>
-          </div>
-          
+   <!-- About Us Section -->
+  <div class="about-section" id="about">
+    <div class="about-header">
+      <h2>ABOUT US</h2>
+      <p class="about-description">
+        <em>AUT's latest 2025 communications graduates, a creative duo who may secretly be related, chronically online, and Bluetooth-paired. Always ready to lean, absorb all the knowledge possible, and turn weird sparks into ideas that land.</em>
+      </p>
+    </div>
+
+    <!-- Team Member Split -->
+    <div class="split-container">
+      <div class="split left" onclick="openTeamModal(1)">
+        <img src="images/renae_card.png" alt="Renae Martinovich" class="split-image">
+      </div>
+
+      <div class="split right" onclick="openTeamModal(2)">
+        <img src="images/zoe_card.png" alt="Zoe Douglas" class="split-image">
+      </div>
+    </div>
+  </div>
+
     <!-- Team Member Modal -->
           <div id="teamModal" class="modal" onclick="closeTeamModal(event)">
             <div class="modal-content" onclick="event.stopPropagation()">
               <span class="close" onclick="closeTeamModal()">&times;</span>
-
-                  <!-- Sticker with image -->
-    <div class="team-sticker" id="teamSticker">
-      <img id="teamStickerImg" src="" alt="Sticker">
-    </div>
 
               <div class="team-modal-layout">
                 <img id="teamImage" class="team-modal-image" src="" alt="">
@@ -70,42 +65,50 @@
             </div>
           </div>
 
+          <!-- Auto-scrolling banner -->
+    <div class="scrolling-banner">
+      <div class="banner-track">
+        <span class="banner-content">⋆⭒˚.⋆ Student Axis Finalists 2026⋆⭒˚.⋆</span>
+        <span class="banner-content">⋆⭒˚.⋆ ACC Capstone Finalists 2025⋆⭒˚.⋆</span>
+        <span class="banner-content">⋆⭒˚.⋆ Student Axis Finalists 2026⋆⭒˚.⋆</span>
+        <span class="banner-content">⋆⭒˚.⋆ ACC Capstone Finalists 2025⋆⭒˚.⋆</span>
+        <span class="banner-content">⋆⭒˚.⋆ Student Axis Finalists 2026⋆⭒˚.⋆</span>
+        <span class="banner-content">⋆⭒˚.⋆ ACC Capstone Finalists 2025⋆⭒˚.⋆</span>
+      </div>
+    </div>
+
     <!-- Portfolio Work Modal-->
           <div>
             <br>
-            <h1 style="text-align: center; color:#658e93;"> OUR WORK </h1>
+            <h1 style="text-align: center; color:#304C83;" id="work"> OUR WORK </h1>
           </div>
-          <div class="portfolio-section" id="work">
-            <div class="portfolio-grid">
-              <div class="portfolio-item" onclick="openModal(1)" style="background: #c7dd9d;">
-                <img src="images/trash_talkers_1.jpg" alt="Trash Talkers">
-                <div class="portfolio-info">
-                  <h3>Trash Talkers</h3>
-                </div>
-              </div>
-              
-              <div class="portfolio-item" onclick="openModal(2)" style="background: #fee0e9;">
-                <img src="images/check_your_boobs_1.jpg" alt="Breast Cancer Awareness">
-                <div class="portfolio-info">
-                  <h3>Check Your Boobs</h3>
-                </div>
-              </div>
-              
-              <div class="portfolio-item" onclick="openModal(3)" style="background: #fee0e9;">
-                <img src="images/you_still_need_1.jpg" alt="No Ugly">
-                <div class="portfolio-info">
-                  <h3>You Just Need</h3>
-                </div>
-              </div>
-              
-              <div class="portfolio-item" onclick="openModal(4)" style="background: #c7dd9d;">
-                <img src="images/milo_history_1.jpg" alt="Milo's True History">
-                <div class="portfolio-info">
-                  <h3>Milo's "True" History</h3>
-                </div>
-              </div>
-              </div>
-            </div>
+          <div class="portfolio-section" >
+  <div class="portfolio-grid">
+    <div class="portfolio-item" onclick="openModal(1)">
+      <img src="images/trash_talkers_1.png" alt="Trash Talkers">
+    </div>
+    
+    <div class="portfolio-item" onclick="openModal(2)">
+      <img src="images/check_your_boobs_1.png" alt="Breast Cancer Awareness">
+    </div>
+    
+    <div class="portfolio-item" onclick="openModal(3)">
+      <img src="images/you_still_need_1.png" alt="No Ugly">
+    </div>
+    
+    <div class="portfolio-item" onclick="openModal(4)">
+      <img src="images/milo_history_1.png" alt="Milo's True History">
+    </div>
+
+        <div class="portfolio-item" onclick="openModal(5)">
+      <img src="images/aa_insurance_1.png" alt="AA Insurance">
+    </div>
+
+        <div class="portfolio-item" onclick="openModal(6)">
+      <img src="images/aa_dad_jobs_1.png" alt="Dad Jobs">
+    </div>
+  </div>
+</div>
           </div>
           
     <!-- Portfolio Work Modal Popup -->
@@ -129,44 +132,51 @@
               
             </div>
           </div>
+          </body>
 
-    <!--Contact Us-->
-    <div class="contact-section" id="contact">
-        <div class="contact-container">
-          <h2>Lets grab a coffee &#40or hot chocolate&#41.</h2>
-          <h3>Things just click better when we're face to face</h3>
-          
-          <div class="contact-grid">
-            <div class="contact-card">
-              <div class="contact-icon"></div>
-              <h3>Email Us</h3>
-              <a href="mailto:marglous1@outlook.com">marglous1@outlook.com</a>
-            </div>
-            
-            <div class="contact-card">
-              <div class="contact-icon"></div>
-              <h3>Call Us</h3>
-              <p><b>Renae Martinovich:</b><a href="tel:+642102829996">021 028 29996</a></p>
-              <p><b>Zoe Douglas:</b><a href="tel:+642102723227">021 027 23227</a></p>
-            </div>
 
-            <div class="contact-card">
-              <div class="contact-icon"></div>
-              <h3>Location</h3>
-              <p>Auckland, New Zealand</p>
-            </div>
-            
-            
-          </div>
+  </div>
+          <!--Contact Us-->
+  <!-- Footer (Contact Section) stays outside main-content -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <h2>Lets grab a coffee &#40or hot chocolate&#41.</h2>
+      <h3>Things just click better when we're face to face</h3>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon"></div>
+          <h3>Email Us</h3>
+          <a href="mailto:marglous1@outlook.com">marglous1@outlook.com</a>
+        </div>
+        
+        <div class="contact-card phone-card">
+          <div class="contact-icon"></div>
+          <h3>Call Us</h3>
+          <p><b>Renae Martinovich:</b><a href="tel:+642102829996">021 028 29996</a></p>
+          <p><b>Zoe Douglas:</b><a href="tel:+642102723227">021 027 23227</a></p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"></div>
+          <h3>Location</h3>
+          <p>Auckland, New Zealand</p>
         </div>
       </div>
       
-      <footer class="footer">
-        <p>&copy; 2025 Marglous. All rights reserved.</p>
-      </footer>
+      <p class="copyright">&copy; 2025 Marglous. All rights reserved.</p>
+      <p class="copyright2"><em>Designed & Created by Zoe</em></p>
+    </div>
+  </footer>
+
 
     <!--JavaScript Begins-->     
     <script>
+
+function openTeamModal(memberId) {
+      // Your existing modal opening code
+      console.log('Opening modal for team member:', memberId);
+    }
         // Team member information
         const teamMembers = {
         1: {
@@ -174,63 +184,69 @@
             role: "Copywriter",
             image: "images/renae.png",
             skills: ["Drawing & Painting", "Social Media Management", "Adobe Photoshop", "Canva", "Photography", "Storyboarding", "Event Management/Planning", "Cosmetics/Beauty", "Copywriting", "Art Direction"],
-            bio: "My creative sweet spot sits somewhere between “this might work” and “hear me out.” I’m an artistic kid at heart and can visualise ideas fast, but Zoe is the one who makes my scribbles presentable. I’m chronically online, obsessed with creating novel ideas, and can whip out a line dance to just about any country song. I thrive off feedback and love turning playful chaos into work that actually works.",
-            sticker: "images/renae_sticker.png",
-            stickerClass: "renae"
+            bio: "My creative sweet spot sits somewhere between “this might work” and “hear me out.” I’m an artistic kid at heart and can visualise ideas fast, but Zoe is the one who makes my scribbles presentable. I’m chronically online, obsessed with creating novel ideas, and can whip out a line dance to just about any country song. I thrive off feedback and love turning playful chaos into work that actually works."
           },
         2: {
             name: "Zoe Douglas",
             role: "Art Director",
             image: "images/zoe.png",
             skills: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Lightroom", "Adobe After Effects", "Adobe Premiere Pro", "Adobe XD", "Office 365 Suite", "Canva", "Photography", "Graphic Design", "Coding", "Web & App Design", "Motion Graphics", "Social Media Content Creation", "Video Editing"],
-            bio: "I love building ideas that feel meaningful and are visually striking. Outside of design and concepting. Curiosity is a bit part of how I work and I love seeing how people connect with art from a distance. I spend a lot of time reading, and diving into anything new I can learn. I’m reliable, organised, and thoughtful wth my work, but i’m happiest when I get to explore weird, out-of-the-box ideas and turn them into something smart and engaging",
-            sticker: "images/zoe_sticker.png",
-            stickerClass: "zoe"
+            bio: "I love building ideas that feel meaningful and are visually striking. Outside of design and concepting. Curiosity is a bit part of how I work and I love seeing how people connect with art from a distance. I spend a lot of time reading, and diving into anything new I can learn. I’m reliable, organised, and thoughtful wth my work, but i’m happiest when I get to explore weird, out-of-the-box ideas and turn them into something smart and engaging"
         }
         };
 
 
-        function openTeamModal(memberId) {
-        const member = teamMembers[memberId];
-        
-        document.getElementById('teamName').textContent = member.name;
-        document.getElementById('teamRole').textContent = member.role;
-        document.getElementById('teamImage').src = member.image;
-        document.getElementById('teamBio').textContent = member.bio;
-
-        // Set the sticker image
-  document.getElementById('teamStickerImg').src = member.sticker;
-  const stickerEl = document.getElementById('teamSticker');
-  stickerEl.className = 'team-sticker ' + member.stickerClass;
+function openTeamModal(memberId) {
+  const member = teamMembers[memberId];
+  
+  document.getElementById('teamName').textContent = member.name;
+  document.getElementById('teamRole').textContent = member.role;
+  document.getElementById('teamImage').src = member.image;
+  document.getElementById('teamBio').textContent = member.bio;
+  
+  // Set background color and text color based on team member
+  const modalContent = document.querySelector('#teamModal .modal-content');
+  const teamInfo = document.querySelector('.team-info');
+  
+  modalContent.style.backgroundColor = '#FDF6EC'; // Cream background
+  
+  let textColor;
+  if (memberId === 1) {
+    textColor = '#22683E'; // Green for Renae
+  } else if (memberId === 2) {
+    textColor = '#F494B4'; // Pink for Zoe
+  }
+  
+  // Apply text color to all elements
+  teamInfo.style.color = textColor;
+  document.getElementById('teamName').style.color = textColor;
+  document.getElementById('teamRole').style.color = textColor;
+  document.getElementById('teamBio').style.color = textColor;
+  document.querySelector('.skills-section h4').style.color = textColor;
+  
+  // Create skill tags with matching color
+  const skillsContainer = document.getElementById('teamSkills');
+  skillsContainer.innerHTML = '';
+  member.skills.forEach(skill => {
+    const tag = document.createElement('span');
+    tag.className = 'skill-tag';
+    tag.textContent = skill;
+    tag.style.color = textColor; // Match text color
+    tag.style.backgroundColor = 'transparent'; // Optional: remove gray background
+    tag.style.border = `2px solid ${textColor}`; // Optional: add colored border
+    skillsContainer.appendChild(tag);
+  });
   
   
-        // Create skill tags
-        const skillsContainer = document.getElementById('teamSkills');
-        skillsContainer.innerHTML = '';
-        member.skills.forEach(skill => {
-            const tag = document.createElement('span');
-            tag.className = 'skill-tag';
-            tag.textContent = skill;
-            skillsContainer.appendChild(tag);
-        });
-        
-        document.getElementById('teamModal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        }
-
-        function closeTeamModal(event) {
-        if (!event || event.target.id === 'teamModal') {
-            document.getElementById('teamModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        }
-
-        // Add Escape key support for team modal
-        document.addEventListener('keydown', function(event) {
-        if (document.getElementById('teamModal').style.display === 'block' && event.key === 'Escape') {
-            closeTeamModal();
-        }
-        });
+  document.getElementById('teamModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeTeamModal(event) {
+  if (!event || event.target.id === 'teamModal' || event.target.classList.contains('close')) {
+    document.getElementById('teamModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
 
                 let currentProject = null;
                 let currentImageIndex = 0;
@@ -241,41 +257,60 @@
                     title: "Trash Talkers",
                     finalist: true,
                     images: [
-                        "images/trash_talkers_1.jpg",
-                        "images/trash_talkers_2.jpg",
-                        "images/trash_talkers_3.jpg",
-                        "images/trash_talkers_4.jpg"
+                        "images/trash_talkers_1.png",
+                        "images/trash_talkers_2.png",
+                        "images/trash_talkers_3.png",
+                        "images/trash_talkers_4.png"
                     ]
                     },
                     2: {
                     title: "Check Your Boobs",
                     finalist: false,
                     images: [
-                        "images/check_your_boobs_1.jpg",
-                        "images/check_your_boobs_2.jpg",
-                        "images/check_your_boobs_3.jpg",
-                        "images/check_your_boobs_4.jpg"
+                        "images/check_your_boobs_1.png",
+                        "images/check_your_boobs_2.png",
+                        "images/check_your_boobs_3.png",
+                        "images/check_your_boobs_4.png",
+                        "images/check_your_boobs_5.png"
                     ]
                     },
                     3: {
                     title: "You Still Need",
                     finalist: false,
                     images: [
-                        "images/you_still_need_1.jpg",
-                        "images/you_still_need_2.jpg",
-                        "images/you_still_need_3.jpg",
-                        "images/you_still_need_4.jpg"
+                        "images/you_still_need_1.png",
+                        "images/you_still_need_2.png",
+                        "images/you_still_need_3.png",
+                        "images/you_still_need_4.png",
+                        "images/you_still_need_4.png"
                     ]
                     },
                     4: {
                     title: "Milo's \"True\" History",
                     finalist: true,
                     images: [
-                        "images/milo_history_1.jpg",
-                        "images/milo_history_2.jpg",
-                        "images/milo_history_3.jpg",
-                        "images/milo_history_4.jpg",
-                        "images/milo_history_5.jpg"
+                        "images/milo_history_1.png",
+                        "images/milo_history_2.png",
+                        "images/milo_history_3.png",
+                        "images/milo_history_4.png",
+                        "images/milo_history_5.png"
+                    ]
+                    },
+                    5: {
+                    title: "AA Insurance",
+                    finalist: true,
+                    images: [
+                        "images/aa_insurance_1.png",
+                        "images/aa_insurance_2.png"
+                    ]
+                    },
+                    6: {
+                    title: "Dad Jobs",
+                    finalist: true,
+                    images: [
+                        "images/aa_dad_jobs_1.png",
+                        "images/aa_dad_jobs_2.png",
+                        "images/aa_dad_jobs_3.png",
                     ]
                     },
                 
@@ -363,4 +398,5 @@
                 });
     </script>
           
-</body>
+</html>
+
